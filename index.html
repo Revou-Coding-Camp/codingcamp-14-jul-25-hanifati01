@@ -11,59 +11,67 @@
 </head>
 
 <body class=" bg-pink-200">
+
+   <div id="popup" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+  <div class="bg-pink-200 p-6 rounded shadow w-70">
+    <h3 class="text-xl text-pink-500 mb-4">Insert name, please >v<</h3>
+    <input type="text" id="popup-name" class="border w-full text-pink-600 p-2 mb-4" />
+    <button onclick="submitName()" class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-rose-500">
+      Submit
+    </button>
+  </div>
+</div>
+
     <!-- Header Content with Tailwind CSS -->
     <header class="flex justify-between items-center p-[8px]">
         <!-- Logo Icon -->
-        <div class="h-16 w-16 bg-[url(https://drive.google.com/thumbnail?id=1BfRwyKh02wQvavmTuemJhoH9RTo7IPgs)] rounded-full bg-center bg-cover"></div>
+        <div class="h-16 w-16 bg-[url(https://drive.google.com/thumbnail?id=1BfRwyKh02wQvavmTuemJhoH9RTo7IPgs)] 
+        rounded-full bg-center bg-cover"></div>
 
        <nav class="flex gap-4 justify-center p-4">
-  <a class="border rounded px-4 py-2 hover:bg-rose-100 cursor-pointer"
-     onclick="showSection('home-page')">Start Point!</a>
-  <a class="border rounded px-4 py-2 hover:bg-rose-100 cursor-pointer"
-     onclick="showSection('our-profile')">What's this page?</a>
-  <a class="ext-xs border rounded px-4 py-2 hover:bg-rose-100 cursor-pointer"
-     onclick="showSection('message-us')">Who's Akiyama Mizuki?</a>
+     <a class="border rounded px-4 py-2 text-pink-600 hover:bg-rose-100 cursor-pointer"
+     onclick="showSection('home')">Starting Point!</a>
+     <a class="border rounded px-4 py-2 text-pink-600 hover:bg-rose-100 cursor-pointer"
+     onclick="showSection('trivia')">Who's Akiyama Mizuki?</a>
+     <a class="border rounded px-4 py-2 text-pink-600 hover:bg-rose-100 cursor-pointer"
+     onclick="showSection('quiz')">Quiz</a>
 </nav>
 
     </header>
-
+ <!-------------------------------------------------->
 
     <!-- Main Content -->
     <main>
-        <!-- Home Content -->
-        <section id="home-page">
+        <!-- Starting Point -->
+        <section id="home">
             <header>
-                <h1 class="text-2xl font-bold text-center my-4">Welcome <span id="welcome-user">[User]</span> to Our
-                    Website
+                <h1 class="text-4xl font-bold text-center my-10 text-pink-600">Halo, <span id="welcome-user">[User]</span>!
+                    <br/>Selamat datang di Fanpage!
                 </h1>
             </header>
+            
+            <div class="flex flex-col items-center gap-4">
+    <div class="h-50 w-50 bg-[url('https://drive.google.com/thumbnail?id=11_hUN0vXe-wyjcvUw1Ujfgdjz7Lh62iG')]
+    bg-center bg-cover rounded-lg"></div>
+                <p class="text-center py-3 text-pink-600">
+                    Halaman ini adalah website demo yang terbentuk untuk memenuhi 
+                    tugas pembuatan website dari coding camp RevoU. Juga berfungsi
+                    sebagai bentuk dedikasi terhadap Akiyama "Amia" Mizuki!
+                </p>
 
-            <div>
-                <p class="text-center">This is the home page content. Here you can find various information about our
-                    services.</p>
+                <div class="text-center mt-8">
+  <p class="text-xl font-semibold mb-4 text-pink-600">Apakah kamu sudah kenal Mizuki?</p>
+  <button onclick="handleChoice('yes')" class="bg-pink-500 text-white px-4 py-2 rounded mx-2 hover:bg-pink-600">Ya</button>
+  <button onclick="handleChoice('no')" class="bg-rose-500 text-white px-4 py-2 rounded mx-2 hover:bg-rose-600">Belum</button>
+</div>
+
 
                 <div class="banner-img"></div>
             </div>
         </section>
 
-        <hr />
-
-        <!-- Our Profile Content -->
-        <section id="our-profile" class="hidden">
-            <header>
-                <h2 class="text-xl font-semibold text-center my-4">Our Profile</h2>
-            </header>
-
-            <article>
-                <p class="text-center">We are a team of dedicated professionals committed to providing the best services
-                    possible. Our profile includes our mission, vision, and values.</p>
-            </article>
-        </section>
-
-        <hr />
-
-        <!-- Message Us Content -->
-        <section id="message-us" class="hidden">
+        <!-- WAM -->
+        <section id="trivia" class="hidden">
             <header>
                 <h2 class="text-xl font-semibold text-center my-4">Message Us</h2>
             </header>
@@ -82,11 +90,55 @@
 
             <div id="message-output" class="text-center mt-4">Result:</div>
         </section>
+
+<section id="quiz" class="hidden">
+  <header>
+    <h2 class="text-xl font-bold text-center my-4 text-pink-600">Wohoo! Fellow Mizuki enjoyers!!!</h2>
+  </header>
+   <div class="h-50 w-50 bg-[url('https://drive.google.com/thumbnail?id=1hmcaA9ev6oREvpdyyt2gGZFfdT2lTGWJ')]
+    bg-center bg-cover rounded-lg mx-auto"></div>
+  <p class="text-center text-pink-500 px-4">
+    Eits! Tapi kamu yakin sudah kenal dengan Mizuki sampai segitunya?<br/>
+    Coba tes dulu yuk, seberapa kenalnya kamu dengan Mizuki melalui kuis-kuis
+    singkat di bawah ini!
+
+    <div class="text-center mt-8">
+        <!-- Pertanyaan 1 -->
+        <h3><p class="font-semibold mb-4 text-pink-600 text-center">Mizuki berperan sebagai apa di grup Nightcord at 25:00?</p>
+        </h3>
+        <button onclick="handleAnswer('q1', 'no')"
+        class="bg-rose-500 text-white px-4 py-2 rounded mx-2 hover:bg-rose-600 text-center">Ilustrator</button>
+        <button onclick="handleAnswer('q1', 'yes')" 
+        class="bg-pink-500 text-white px-4 py-2 rounded mx-2 hover:bg-pink-600 text-center">Animator</button>
+        <div id="quiz-result-q1" class="mt-6 text-lg text-pink-700 font-bold"></div>
+
+        <!-- Pertanyaan 2 -->
+        <h3><p class="font-semibold mb-4 text-pink-600 text-center">Mizuki sekolah di mana?</p>
+        </h3>
+        <button onclick="handleAnswer('q2', 'no')" 
+        class="bg-rose-500 text-white px-4 py-2 rounded mx-2 hover:bg-rose-600 text-center">Akademi Miyamasuzaka</button>
+        <button onclick="handleAnswer('q2', 'yes')" 
+        class="bg-pink-500 text-white px-4 py-2 rounded mx-2 hover:bg-pink-600 text-center">SMA Kamiyama</button>
+        <div id="quiz-result-q2" class="mt-6 text-lg text-pink-700 font-bold"></div>
+
+        <!-- Pertanyaan 3 -->
+        <h3><p class="font-semibold mb-4 text-pink-600 text-center">Mizuki berkolaborasi dengan karakter Sanrio yang mana?</p>
+        </h3>
+        <button onclick="handleAnswer('q3', 'yes')" 
+        class="bg-rose-500 text-white px-4 py-2 rounded mx-2 hover:bg-rose-600 text-center">Bonbonribbon</button>
+        <button onclick="handleAnswer('q3', 'no')" 
+        class="bg-pink-500 text-white px-4 py-2 rounded mx-2 hover:bg-pink-600 text-center">My Melody</button>
+        <div id="quiz-result-q3" class="mt-6 text-lg text-pink-700 font-bold"></div>
+        </div>
+
+</section>
+
     </main>
 
     <!-- Footer Content -->
     <footer>
-        <p class="text-center text-gray-600 py-4">© 2025 Yama Company. All rights reserved.</p>
+        <p class="text-center text-pink-500 py-34 italic">Remember to take care of yourself
+            cuz therapy is expensive ヾ(๑╹ꇴ◠๑)ﾉ”</p>
     </footer>
 
     <!-- JavaScript External Link -->
