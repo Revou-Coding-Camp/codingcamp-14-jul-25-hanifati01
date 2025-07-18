@@ -4,23 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yama Company</title>
+    <title>Akiyama Mizuki's fanpage</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class=" bg-pink-200">
     <!-- Header Content with Tailwind CSS -->
-    <header class="flex justify-between items-center p-[8px] bg-gray-200">
+    <header class="flex justify-between items-center p-[8px]">
         <!-- Logo Icon -->
-        <div class="h-16 w-16 bg-[url(https://picsum.photos/200)] rounded-full bg-center bg-cover"></div>
+        <div class="h-16 w-16 bg-[url(https://drive.google.com/thumbnail?id=1BfRwyKh02wQvavmTuemJhoH9RTo7IPgs)] rounded-full bg-center bg-cover"></div>
 
-        <nav class="flex">
-            <a class="border rounded-[4px] py-[4px] px-[8px] text-decoration-none" href="#home-page">Home</a>
-            <a class="border rounded-[4px] py-[4px] px-[8px] text-decoration-none" href="#our-profile">Our Profile</a>
-            <a class="border rounded-[4px] py-[4px] px-[8px] text-decoration-none" href="#message-us">Message Us</a>
-        </nav>
+       <nav class="flex gap-4 justify-center p-4">
+  <a class="border rounded px-4 py-2 hover:bg-rose-100 cursor-pointer"
+     onclick="showSection('home-page')">Start Point!</a>
+  <a class="border rounded px-4 py-2 hover:bg-rose-100 cursor-pointer"
+     onclick="showSection('our-profile')">What's this page?</a>
+  <a class="ext-xs border rounded px-4 py-2 hover:bg-rose-100 cursor-pointer"
+     onclick="showSection('message-us')">Who's Akiyama Mizuki?</a>
+</nav>
+
     </header>
 
 
@@ -45,7 +49,7 @@
         <hr />
 
         <!-- Our Profile Content -->
-        <section id="our-profile">
+        <section id="our-profile" class="hidden">
             <header>
                 <h2 class="text-xl font-semibold text-center my-4">Our Profile</h2>
             </header>
@@ -59,7 +63,7 @@
         <hr />
 
         <!-- Message Us Content -->
-        <section id="message-us">
+        <section id="message-us" class="hidden">
             <header>
                 <h2 class="text-xl font-semibold text-center my-4">Message Us</h2>
             </header>
