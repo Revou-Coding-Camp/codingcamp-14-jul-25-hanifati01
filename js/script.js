@@ -44,14 +44,29 @@ function handleAnswer(questionId, choice) {
   if (questionId === "q1") {
     message = choice === "yes" ? "Benar! Mizuki adalah animator📹" : "Oops, salah! Mizuki bukan ilustrator🎨";
   } else if (questionId === "q2") {
-    message = choice === "yes" ? "Betul! Mizuki sekolah di SMA Kamiyama 🏫" : "Kurang tepat! Sekolahnya di Kamiyama (ᵕ—ᴗ—)";
+    message = choice === "yes" ? "Betul! Mizuki sekolah di SMA Kamiyama XD" : "Kurang tepat! Sekolahnya di Kamiyama (ᵕ—ᴗ—)";
   } else if (questionId === "q3") {
-    message = choice === "yes" ? "Benar! Kolaborasinya dengan Bonbonribbon 🎀" : "Bbu buu! Mizuki nggak berkolaborasi dengan My Melody (❀❛ ֊ ❛„)♡";
+    message = choice === "yes" ? "Benar! Kolaborasinya dengan Bonbonribbon 🎀" : "Bbu buu! Mizuki bukan berkolaborasi<br/>dengan My Melody (❀❛ ֊ ❛„)♡";
   }
 
   resultElement.innerHTML = message;
 }
 
+function tampilkanPilihan() {
+  const kategori = document.getElementById("kategori").value;
+  const deskripsi = document.getElementById("deskripsi-pilihan");
+
+  let isi = "";
+  if (kategori === "fashion") {
+    isi = "Mizuki selalu tampil dengan fashion yang unik dan edgy. Gaya-nya sangat ekspresif dan menjadi ciri khas!";
+  } else if (kategori === "musik") {
+    isi = "Mizuki bergabung dengan Nightcord at 25:00 dan berkontribusi pada visualisasi musik yang emosional dan dalam.";
+  } else if (kategori === "kepribadian") {
+    isi = "Karakter Mizuki dikenal kompleks, tegas, dan sangat kreatif. Ia sering jadi sorotan karena aura misteriusnya.";
+  }
+
+  deskripsi.innerHTML = isi;
+}
 
 
 

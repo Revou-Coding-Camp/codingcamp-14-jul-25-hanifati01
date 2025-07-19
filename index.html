@@ -70,27 +70,75 @@
             </div>
         </section>
 
-        <!-- WAM -->
+        <!-- WAM? -->
         <section id="trivia" class="hidden">
             <header>
-                <h2 class="text-xl font-semibold text-center my-4">Message Us</h2>
+                <h1 class="text-xl font-bold text-center my-4 text-pink-600">Let's get to know first,
+                    Nightcord at 25:00.
+                </h1>
             </header>
+           
+            <div class="flex justify-center gap-2">
+            <img src="https://drive.google.com/thumbnail?id=1eHtGTy-yq46Y1q88KJLxGIZiW4tWpL2E" 
+            class="w-40 h-40 object-cover rounded-lg
+            object-cover transition-transform duration-300 ease-in-out hover:scale-108 hover:shadow-lg" />
+            <img src="https://drive.google.com/thumbnail?id=12fwvTYHn9D5-MOwVnZMr297DZ8Y-nd65" 
+            class="w-40 h-40 object-cover rounded-lg
+            object-cover transition-transform duration-300 ease-in-out hover:scale-108 hover:shadow-lg" />
+            </div>
+            
+            <div class="flex justify-center gap-2">
+            <h3 class="text-xl font-bold text-center mx-2 my-4 text-violet-600
+            hover:text-violet-400 transition-colors duration-300">Asahina Mafuyu</h3>
+            <h3 class="text-xl font-bold text-center mx-2 my-4 text-sky-600
+            hover:text-sky-400 transition-colors duration-300">Yoisaki Kanade</h3>
+            </div>
 
-            <form>
+            <br/>
+            <div class="flex justify-center gap-2">
+            <img src="https://drive.google.com/thumbnail?id=1n1hn1pkwK4NlqlsZgfs_9uJwCLVgqPWN" 
+            class="w-40 h-40 object-cover rounded-lg
+            object-cover transition-transform duration-300 ease-in-out hover:scale-108 hover:shadow-lg" />
+            <img src="https://drive.google.com/thumbnail?id=1tzXU_-0fsWNzD3r9f37tioMz3fa58RVC" 
+            class="w-40 h-40 object-cover rounded-lg
+            object-cover transition-transform duration-300 ease-in-out hover:scale-108 hover:shadow-lg" />
+            </div>
 
-                <div class="flex flex-col items-center">
-                    <label for="name-input" class="mb-2">Name:</label>
-                    <input type="text" id="name-input" name="name" class="border rounded p-2 mb-4 w-1/2">
-
-                    <button onclick="validateForm();" type="button"
-                        class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Send
-                        Message</button>
-                </div>
-            </form>
-
-            <div id="message-output" class="text-center mt-4">Result:</div>
+            <div class="flex justify-center gap-2">
+            <h3 class="text-xl font-bold text-center mx-1 my-4 text-amber-600
+            hover:text-amber-400 transition-colors duration-300">Shinonome Ena</h3>
+            <h3 class="text-xl font-bold text-center mx-1 my-4 text-rose-600
+            hover:text-rose-400 transition-colors duration-300">Akiyama Mizuki</h3>
+            </div>
+            <br/>
+            
+            <p class="text-center text-pink-500 px-4 italic">
+            "A mysterious music circle that operates at 1:00 AM (25:00), 
+            and whose identities are shrouded in mystery." </p>
+            <p class="indent-4 text-justify text-pink-500 py-2 px-4">
+            Akiyama Mizuki merupakan anggota dari perkumpulan yang selalu
+            bertemu pada pukul 25 atau 1 malam. Mizuki menggunakan nama online Amia
+            dan bertugas membuat MV untuk lagu buatan K (Yoisaki Kanade) yang liriknya
+            ditulis oleh Yuki (Asahina Mafuyu) dan ilustrasinya digambar oleh
+            Enanan (Shinonome Ena). <br/></p>
+            <p class="indent-4 text-justify text-pink-500 py-2 px-4">
+            Mizuki memiliki kesukaan tersendiri kepada hal-hal lucu, terutama
+            yang berhubungan dengan pita. Sehingga pita seringkali dijadikan sebagai
+            perlambangan dirinya di beberapa lagu maupun cerita dari game Project Sekai.
+            Bahkan dalam kolaborasi gamenya dengan Sanrio pun, Mizuki dipasangkan
+            dengan Bonbonribbon.<br/></p>
+            <p class="indent-4 text-justify text-pink-500 py-2 px-4">
+            Di dalam perkumpulan Nightcord, Mizuki merupakan anggota grup termuda dengan dirinya
+            lebih muda setahun dari Kanade, Mafuyu, dan Ena. Meskipun mereka memulai pertemuan
+            di pukul 1 pagi, Mizuki tetap datang ke sekolah di pagi harinya, seperti Mafuyu yang
+            bersekolah di Akademi Miyamasuzaka. Mizuki bersekolah di SMA Kamiyama seperti Ena, tetapi
+            Ena menjalankan program karyawan dan hanya mendatangi sekolah di jam malam. Sementara
+            Kanade menjalankan home-schooling. 
+            </p>
+            
         </section>
 
+<!-- QUIZ -->
 <section id="quiz" class="hidden">
   <header>
     <h2 class="text-xl font-bold text-center my-4 text-pink-600">Wohoo! Fellow Mizuki enjoyers!!!</h2>
@@ -100,7 +148,7 @@
   <p class="text-center text-pink-500 px-4">
     Eits! Tapi kamu yakin sudah kenal dengan Mizuki sampai segitunya?<br/>
     Coba tes dulu yuk, seberapa kenalnya kamu dengan Mizuki melalui kuis-kuis
-    singkat di bawah ini!
+    singkat di bawah ini!</p>
 
     <div class="text-center mt-8">
         <!-- Pertanyaan 1 -->
@@ -129,8 +177,45 @@
         <button onclick="handleAnswer('q3', 'no')" 
         class="bg-pink-500 text-white px-4 py-2 rounded mx-2 hover:bg-pink-600 text-center">My Melody</button>
         <div id="quiz-result-q3" class="mt-6 text-lg text-pink-700 font-bold"></div>
-        </div>
+        </div><br/>
 
+
+            <form>
+                <div class="flex flex-col items-center">
+                    <label for="name-input" class="mb-2">Name:</label>
+                    <input type="text" id="name-input" name="name" class="border rounded p-2 mb-4 w-1/2">
+
+                    <button onclick="validateForm();" type="button"
+                        class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Send
+                        Message</button>
+                </div>
+            </form>
+            <br/>
+            <form class="max-w-xl mx-auto bg-pink-100 p-6 rounded-lg shadow">
+  <!-- Dropdown Pilihan -->
+  <label for="kategori" class="block mb-2 text-pink-600 font-semibold">Pilih kategori fanpage:</label>
+  <select id="kategori" onchange="tampilkanPilihan()" class="border-pink-300 border w-full p-2 rounded mb-4 text-pink-700">
+    <option value="">-- Pilih --</option>
+    <option value="fashion">Fashion Mizuki</option>
+    <option value="musik">Musik Nightcord</option>
+    <option value="kepribadian">Kepribadian Mizuki</option>
+  </select>
+
+  <!-- Konten Dinamis Berdasarkan Pilihan -->
+  <div id="deskripsi-pilihan" class="text-pink-600 mb-4"></div>
+
+  <!-- Kotak Masukan Saran -->
+  <label for="saran" class="block mb-2 text-pink-600 font-semibold">Saran/Kesan kamu:</label>
+  <textarea id="saran" rows="6" class="border-pink-300 border w-full p-2 rounded mb-4 text-pink-700" placeholder="Tulis kesanmu di sini..."></textarea>
+
+  <!-- Tombol Submit -->
+  <button type="submit" class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-rose-600 transition">
+    Kirim 💌
+  </button>
+</form>
+
+
+            <div id="message-output" class="text-center mt-4">Result:</div>
 </section>
 
     </main>
