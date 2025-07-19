@@ -16,7 +16,7 @@
   <div class="bg-pink-200 p-6 rounded shadow w-70">
     <h3 class="text-xl text-pink-500 mb-4">Insert name, please >v<</h3>
     <input type="text" id="popup-name" class="border w-full text-pink-600 p-2 mb-4" />
-    <button onclick="submitName()" class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-rose-500">
+    <button id="submit-button" class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-rose-500">
       Submit
     </button>
   </div>
@@ -135,7 +135,12 @@
             Ena menjalankan program karyawan dan hanya mendatangi sekolah di jam malam. Sementara
             Kanade menjalankan home-schooling. 
             </p>
-            
+            <br/>
+            <a href="https://projectsekai.fandom.com/wiki/Akiyama_Mizuki" 
+            class="text-left text-pink-600 hover:text-rose-500 underline">
+                Klik di sini untuk cek trivia Mizuki lainnya di Project Sekai WikiFandom✨
+            </a>
+ 
         </section>
 
 <!-- QUIZ -->
@@ -177,35 +182,25 @@
         <button onclick="handleAnswer('q3', 'no')" 
         class="bg-pink-500 text-white px-4 py-2 rounded mx-2 hover:bg-pink-600 text-center">My Melody</button>
         <div id="quiz-result-q3" class="mt-6 text-lg text-pink-700 font-bold"></div>
-        </div><br/>
-
-
-            <form>
-                <div class="flex flex-col items-center">
-                    <label for="name-input" class="mb-2">Name:</label>
-                    <input type="text" id="name-input" name="name" class="border rounded p-2 mb-4 w-1/2">
-
-                    <button onclick="validateForm();" type="button"
-                        class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Send
-                        Message</button>
-                </div>
-            </form>
+        </div>
             <br/>
+            
             <form class="max-w-xl mx-auto bg-pink-100 p-6 rounded-lg shadow">
-  <!-- Dropdown Pilihan -->
-  <label for="kategori" class="block mb-2 text-pink-600 font-semibold">Pilih kategori fanpage:</label>
-  <select id="kategori" onchange="tampilkanPilihan()" class="border-pink-300 border w-full p-2 rounded mb-4 text-pink-700">
-    <option value="">-- Pilih --</option>
-    <option value="fashion">Fashion Mizuki</option>
-    <option value="musik">Musik Nightcord</option>
-    <option value="kepribadian">Kepribadian Mizuki</option>
-  </select>
+            <!-- Dropdown Pilihan -->
+            <label for="kategori" class="block mb-2 text-pink-600 
+            font-semibold">Bagaimana skor quizmu?</label>
+            <select id="kategori" onchange="tampilkanPilihan()" class="border-pink-300 border w-full p-2 rounded mb-4 text-pink-700">
+            <option value="">-- Pilih --</option>
+            <option value="ok-benar">Benar semua ദ്ദി ˉ͈̀꒳ˉ͈́ )✧</option>
+            <option value="ok-kurang">Hmm, lumayan deh ₍^. .^₎⟆</option>
+            <option value="ok-salah">Salah semua ueueue (⸝⸝๑﹏๑⸝⸝)</option>
+            </select>
 
   <!-- Konten Dinamis Berdasarkan Pilihan -->
   <div id="deskripsi-pilihan" class="text-pink-600 mb-4"></div>
 
   <!-- Kotak Masukan Saran -->
-  <label for="saran" class="block mb-2 text-pink-600 font-semibold">Saran/Kesan kamu:</label>
+  <label for="saran" class="block mb-2 text-pink-600 font-semibold">Saran/Kesan kamu terhadap fanpage ini:</label>
   <textarea id="saran" rows="6" class="border-pink-300 border w-full p-2 rounded mb-4 text-pink-700" placeholder="Tulis kesanmu di sini..."></textarea>
 
   <!-- Tombol Submit -->
@@ -222,7 +217,7 @@
 
     <!-- Footer Content -->
     <footer>
-        <p class="text-center text-pink-500 py-34 italic">Remember to take care of yourself
+        <p class="text-center text-pink-500 py-30 italic">Remember to take care of yourself
             cuz therapy is expensive ヾ(๑╹ꇴ◠๑)ﾉ”</p>
     </footer>
 

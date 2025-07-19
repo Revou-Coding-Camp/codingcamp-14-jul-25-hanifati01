@@ -1,12 +1,32 @@
-function submitName() {
-    const name = document.getElementById("popup-name").value;
-    if (name !== "") {
-        document.getElementById("welcome-user").innerHTML = name;
-        document.getElementById("popup").style.display = "none";
-    } else {
-        alert("Nama belum diisi!");
-    }
-}
+// Saat halaman dimuat, cek apakah nama sudah disimpan
+window.addEventListener("DOMContentLoaded", () => {
+  const nama = localStorage.getItem("nama");
+
+  if (nama) {
+    // Sembunyikan popup dan tampilkan nama
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("welcome-user").textContent = nama;
+  }
+});
+
+// Tangani submit button dengan event handler
+document.getElementById("submit-button").addEventListener("click", () => {
+  const input = document.getElementById("popup-name").value.trim();
+
+  if (input) {
+    // Simpan ke localStorage
+    localStorage.setItem("nama", input);
+
+    // Sembunyikan popup
+    document.getElementById("popup").style.display = "none";
+
+    // Ganti teks sambutan
+    document.getElementById("welcome-user").textContent = input;
+  } else {
+    alert("Yuk isi namanya dulu sebelum masuk~ ✨");
+  }
+});
+
 
 
 function showSection(sectionId) {
@@ -57,12 +77,12 @@ function tampilkanPilihan() {
   const deskripsi = document.getElementById("deskripsi-pilihan");
 
   let isi = "";
-  if (kategori === "fashion") {
-    isi = "Mizuki selalu tampil dengan fashion yang unik dan edgy. Gaya-nya sangat ekspresif dan menjadi ciri khas!";
-  } else if (kategori === "musik") {
-    isi = "Mizuki bergabung dengan Nightcord at 25:00 dan berkontribusi pada visualisasi musik yang emosional dan dalam.";
-  } else if (kategori === "kepribadian") {
-    isi = "Karakter Mizuki dikenal kompleks, tegas, dan sangat kreatif. Ia sering jadi sorotan karena aura misteriusnya.";
+  if (kategori === "ok-benar") {
+    isi = "Yeayyy!!! Kita sama-sama Mizuki enjoyer uhuy~!<br/>٩(^ᗜ^)و";
+  } else if (kategori === "ok-kurang") {
+    isi = "Hmmm, mungkin kamu bisa baca dulu fakta-fakta tentang Mizuki di halaman 'Who's Akiyama Mizuki?'!<br/> Cara aksesnya tinggal klik aja kolom di bagian paling atas halaman ini, kotak yang di tengah (๑'ᵕ'๑)⸝*";
+  } else if (kategori === "ok-salah") {
+    isi = "Aw aw aw (˚ ˃̣̣̥⌓˂̣̣̥ )<br/> Gapapa, gapapaa, ayok kita baca-baca lagi fakta tentang Mizuki!<br/>Kamu bisa cek halaman 'Who's Akiyama Mizuki?'! Cara aksesnya tinggal klik aja kolom di bagian paling atas halaman ini, kotak yang di tengah (๑'ᵕ'๑)⸝*";
   }
 
   deskripsi.innerHTML = isi;
