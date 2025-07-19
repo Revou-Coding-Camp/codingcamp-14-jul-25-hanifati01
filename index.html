@@ -30,14 +30,15 @@
         <div class="h-16 w-16 bg-[url(https://drive.google.com/thumbnail?id=1BfRwyKh02wQvavmTuemJhoH9RTo7IPgs)] 
         rounded-full bg-center bg-cover"></div>
 
-       <nav class="flex gap-4 justify-center p-4">
-     <a class="text-center border rounded px-4 py-2 text-pink-600 hover:bg-rose-100 cursor-pointer"
+       <nav class="flex flex-wrap justify-center items-center gap-4 p-4">
+  <a class="text-center border rounded px-4 py-2 text-pink-600 hover:bg-rose-100 cursor-pointer"
      onclick="showSection('home')">Starting Point!</a>
-     <a class="border rounded px-4 py-2 text-pink-600 hover:bg-rose-100 cursor-pointer"
+  <a class="text-center border rounded px-4 py-2 text-pink-600 hover:bg-rose-100 cursor-pointer"
      onclick="showSection('trivia')">Who's Akiyama Mizuki?</a>
-     <a class="border rounded px-4 py-2 text-pink-600 hover:bg-rose-100 cursor-pointer"
+  <a class="text-center border rounded px-4 py-2 text-pink-600 hover:bg-rose-100 cursor-pointer"
      onclick="showSection('quiz')">Quiz</a>
 </nav>
+
 
     </header>
  <!-------------------------------------------------->
@@ -138,10 +139,13 @@
             Kanade menjalankan home-schooling. 
             </p><br/>
             <br/>
+            <div class="w-full text-right">
             <a href="https://projectsekai.fandom.com/wiki/Akiyama_Mizuki" 
-            class="text-right italic text-rose-600 hover:text-rose-500 underline">
-                Klik di sini untuk cek trivia Mizuki lainnya di Project Sekai WikiFandom✨
+            class="italic text-rose-600 hover:text-rose-500 underline">
+            Klik di sini untuk cek trivia Mizuki lainnya di Project Sekai WikiFandom✨
             </a>
+            </div>
+
  
         </section>
 
@@ -209,10 +213,9 @@
   <button type="submit" class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-rose-600 transition">
     Kirim 💌
   </button>
-</form>
+    </form>
 
 
-            <div id="message-output" class="text-center mt-4">Result:</div>
 </section>
 
     </main>
